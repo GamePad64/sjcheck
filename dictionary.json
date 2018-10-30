@@ -1,12 +1,27 @@
 {
   "categories": {
     "slavery": {
-      "message": "Please, refrain from using master/slave terminology"
+      "message": "Please, refrain from using master/slave terminology."
+    },
+    "racial": {
+      "message": "Prefer using race-neutral term."
     }
   },
-  "words": {
-    "master": {
-      "category": "slavery"
+  "patterns": [
+    {
+      "regex": ".*master.*",
+      "suggest": "leader",
+      "categories": ["slavery"]
+    },
+    {
+      "regex": ".*slave.*",
+      "suggest": "follower",
+      "categories": ["slavery"]
+    },
+    {
+      "regex": ".*blacklist.*",
+      "suggest": "blocklist",
+      "categories": ["racial"]
     }
-  }
+  ]
 }

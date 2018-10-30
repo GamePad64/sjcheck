@@ -10,19 +10,30 @@ from pathlib import Path
 from docopt import docopt
 from colorama import Fore, Style
 import git
-
+import os
+import re
+from ignorefile import IgnoreFile
 
 skiplist = ['.git', '.idea']
 
 
 with open('dictionary.json') as f:
     datafile = json.load(f)
+    patterns = datafile['patterns']
+    for pattern in patterns:
+        pattern['regex'] = re.compile(pattern['regex'], re.IGNORECASE)
 
 
 def check_line(line):
-    for word, desc in datafile['words'].items():
-        if word in line:
-            print(f'{Fore.RED}{Style.BRIGHT}' + datafile['categories'][desc['category']]['message'] + f'{Style.RESET_ALL}')
+    for pattern in patterns:
+        if pattern['regex'].match(line):
+            category = pattern['categories'][0]
+
+            prefer = ''
+            if 'suggest' in pattern:
+                prefer = f'Prefer: {Fore.GREEN}{pattern["suggest"]}'
+
+            print(f'{Fore.RED}{Style.BRIGHT}{datafile["categories"][category]["message"]} {prefer}{Style.RESET_ALL}')
 
 
 def check_branches(path):
@@ -46,21 +57,30 @@ def check_file(name):
         pass
 
 
-def check_directory(path):
+def check_directory(path, ignorefile):
     print(f'{Fore.WHITE}{Style.BRIGHT}Entering directory: {path}{Style.RESET_ALL}')
-    check_branches(path)
 
     pathlist = Path(path).glob('*')
     for file in pathlist:
-        if file.parts[-1] in skiplist:
-            print(f'Skipping: {file}')
+        if file.parts[-1] in skiplist or ignorefile.match(file):
+            # print(f'Skipping: {file}')
             continue
 
         if file.is_file():
             check_file(file)
         if file.is_dir():
-            check_directory(file)
+            check_directory(file, ignorefile)
     print(f'{Fore.WHITE}{Style.BRIGHT}Leaving directory: {path}{Style.RESET_ALL}')
+
+
+def check_root(path):
+    ignorefile = IgnoreFile()
+    if os.path.isfile(f'{path}/.sjignore'):
+        with open(f'{path}/.sjignore') as f:
+            ignorefile.parse(f.read().splitlines(), relative=path)
+
+    check_branches(path)
+    check_directory(path, ignorefile)
 
 
 if __name__ == '__main__':
@@ -68,6 +88,6 @@ if __name__ == '__main__':
 
     if arguments["check"]:
         for path in arguments['<dir>']:
-            check_directory(path)
+            check_root(path)
 
 

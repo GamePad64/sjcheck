@@ -5,6 +5,9 @@
     },
     "racial": {
       "message": "Prefer using race-neutral term."
+    },
+    "nonwelcoming": {
+      "message": "Prefer using welcoming language."
     }
   },
   "patterns": [
@@ -22,6 +25,10 @@
       "regex": ".*blacklist.*",
       "suggest": "blocklist",
       "categories": ["racial"]
+    },
+    {
+      "regex": ".*fuck.*",
+      "categories": ["nonwelcoming"]
     }
   ]
 }

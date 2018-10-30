@@ -1,0 +1,12 @@
+{
+  "categories": {
+    "slavery": {
+      "message": "Please, refrain from using master/slave terminology"
+    }
+  },
+  "words": {
+    "master": {
+      "category": "slavery"
+    }
+  }
+}

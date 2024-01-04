@@ -1,26 +1,30 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 GamePad64/sjcheck is built on the following main stack:
+
 - [Python](https://www.python.org) – Languages
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 GamePad64/sjcheck is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [GamePad64/sjcheck](https://github.com/GamePad64/sjcheck)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|5<br/>Tools used|11/09/23 <br/>Report generated|
+|5<br/>Tools used|01/04/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -65,10 +69,10 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[colorama](https://pypi.org/colorama)|v0.4.0|10/30/18|Alexander Shishenko |BSD-3-Clause|N/A|
-|[docopt](https://pypi.org/docopt)|v0.6.2|10/30/18|Alexander Shishenko |MIT|N/A|
+|[colorama](https://pypi.org/project/colorama)|v0.4.0|10/30/18|Alexander Shishenko |BSD-3-Clause|N/A|
+|[docopt](https://pypi.org/project/docopt)|v0.6.2|10/30/18|Alexander Shishenko |MIT|N/A|
 
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)

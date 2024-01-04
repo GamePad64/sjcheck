@@ -1,7 +1,8 @@
 repo_name: GamePad64/sjcheck
 report_id: 588ade4f799e58cf2e04c1fde6f5a276
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-09T15:33:21+00:00'
+timestamp: '2024-01-04T14:58:54+00:00'
 requested_by: GamePad64
 provider: github
 branch: leader
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/GamePad64/sjcheck
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -25,6 +27,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/GamePad64/sjcheck
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -34,12 +37,13 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/GamePad64/sjcheck/blob/leader/Pipfile
   detection_source: Pipfile
   last_updated_by: Alexander Shishenko
   last_updated_on: 2018-10-30 11:16:15.000000000 Z
 - name: colorama
   description: Cross-platform colored terminal text
-  package_url: https://pypi.org/colorama
+  package_url: https://pypi.org/project/colorama
   version: 0.4.0
   license: BSD-3-Clause
   open_source: true
@@ -47,13 +51,13 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19845/default_accee5d2b8ed75c2245f13504daf75b1cbc8cc9f.png
-  detection_source_url: Pipfile.lock
+  detection_source_url: https://github.com/GamePad64/sjcheck/blob/leader/Pipfile.lock
   detection_source: Pipfile
   last_updated_by: Alexander Shishenko
   last_updated_on: 2018-10-30 12:50:58.000000000 Z
 - name: docopt
   description: Pythonic argument parser, that will make you smile
-  package_url: https://pypi.org/docopt
+  package_url: https://pypi.org/project/docopt
   version: 0.6.2
   license: MIT
   open_source: true
@@ -61,7 +65,7 @@ tools:
   category: Libraries
   sub_category: PyPI Packages
   image_url: https://img.stackshare.io/package/19916/default_0bcdf4801fb769eac80e668560a1012afd8a336d.png
-  detection_source_url: Pipfile.lock
+  detection_source_url: https://github.com/GamePad64/sjcheck/blob/leader/Pipfile.lock
   detection_source: Pipfile
   last_updated_by: Alexander Shishenko
   last_updated_on: 2018-10-30 11:16:15.000000000 Z
